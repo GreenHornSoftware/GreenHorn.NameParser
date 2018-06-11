@@ -156,5 +156,5 @@ Yes, there are several libraries availble that accomplish the same task as this 
 #### Anything else that seems useful
 
 ## License
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/GreenHornSoftware/GreenHorn.NameParser/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/GreenHornSoftware/GreenHorn.NameParser/blob/master/LICENSE)
 
