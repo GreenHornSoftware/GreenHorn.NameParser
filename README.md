@@ -66,7 +66,7 @@ Dim parsedName as Name = new NameParser().Parse("Mr. Foo P. Bar");
 Tests have been created as part of the GreenHorn.NameParser project using the Microsoft Testing Framework.
 
 Example: 
-```charp
+```csharp
 public const string E = "";
 
         [DataTestMethod]
