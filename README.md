@@ -27,13 +27,13 @@ This library is intended to be extendable by providing access to a NameConfigura
 
 ```csharp
 public class Configuration
-    {
-        ...
-        public List<string> Prefix { get; set; };
-        public List<string> Suffix { get; set; };
-        public List<string> CompoundName { get; set; };
-        public List<string> BusinessIndicator { get; set; };
-    }
+{
+    ...
+    public List<string> Prefix { get; set; };
+    public List<string> Suffix { get; set; };
+    public List<string> CompoundName { get; set; };
+    public List<string> BusinessIndicator { get; set; };
+}
 ```
 ## Code Example
 usage: 
@@ -69,51 +69,51 @@ Example:
 ```csharp
 public const string E = "";
 
-        [DataTestMethod]
-        [DataRow("Foo", E, "Foo", E, E, E, false)]
-        [DataRow("Foo Bar", E, "Foo", E, "Bar", E, false)]
-        [DataRow("Foo Bar Jr", E, "Foo", E, "Bar", "Jr", false)]
-        [DataRow("Foo Bar Jr.", E, "Foo", E, "Bar", "Jr.", false)]
-        [DataRow("Foo P. Bar", E, "Foo", "P.", "Bar", E, false)]
-        [DataRow("Mr Foo Bar", "Mr", "Foo", E, "Bar", E, false)]
-        [DataRow("Mr. Foo Bar", "Mr.", "Foo", E, "Bar", E, false)]
-        [DataRow("Mr Foo P. Bar III Phd.", "Mr", "Foo", "P.", "Bar", "III Phd.", false)]
-        [DataRow("Mr. Foo P. Bar III Phd.", "Mr.", "Foo", "P.", "Bar", "III Phd.", false)]
-        [DataRow("Mr Foo P. Bar III Phd", "Mr", "Foo", "P.", "Bar", "III Phd", false)]
-        [DataRow("Mr. Foo P. Bar III Phd", "Mr.", "Foo", "P.", "Bar", "III Phd", false)]
-        [DataRow("Foo della Bar", E, "Foo", E, "della Bar", E, false)]
-        [DataRow("Foo della Bar", E, "Foo", E, "della Bar", E, false)]
-        [DataRow("Mr Foo della Bar", "Mr", "Foo", E, "della Bar", E, false)]
-        [DataRow("Mr. Foo della Bar", "Mr.", "Foo", E, "della Bar", E, false)]
-        [DataRow("fr Foo Bar", "fr", "Foo", E, "Bar", E, false)]
-        [DataRow("Fr Foo Bar", "Fr", "Foo", E, "Bar", E, false)]
-        [DataRow("fr. Foo Bar", "fr.", "Foo", E, "Bar", E, false)]
-        [DataRow("Fr. Foo Bar", "Fr.", "Foo", E, "Bar", E, false)]
-        public void NameParser_Parse_correctly_returns_parses_human_name(
-            string fullName,
-            string prefix,
-            string firstName,
-            string middleName,
-            string lastName,
-            string suffix,
-            bool isBusinessName
-            )
-        {
-            Name expectedResult = new Name() {
-                Prefix = prefix, 
-                First = firstName, 
-                Middle = middleName, 
-                Last = lastName, 
-                Suffix = suffix,
-                IsOrganization = isBusinessName
-            };
-            var parser = new NameParser();
-            var results = parser.Parse(fullName);
+[DataTestMethod]
+[DataRow("Foo", E, "Foo", E, E, E, false)]
+[DataRow("Foo Bar", E, "Foo", E, "Bar", E, false)]
+[DataRow("Foo Bar Jr", E, "Foo", E, "Bar", "Jr", false)]
+[DataRow("Foo Bar Jr.", E, "Foo", E, "Bar", "Jr.", false)]
+[DataRow("Foo P. Bar", E, "Foo", "P.", "Bar", E, false)]
+[DataRow("Mr Foo Bar", "Mr", "Foo", E, "Bar", E, false)]
+[DataRow("Mr. Foo Bar", "Mr.", "Foo", E, "Bar", E, false)]
+[DataRow("Mr Foo P. Bar III Phd.", "Mr", "Foo", "P.", "Bar", "III Phd.", false)]
+[DataRow("Mr. Foo P. Bar III Phd.", "Mr.", "Foo", "P.", "Bar", "III Phd.", false)]
+[DataRow("Mr Foo P. Bar III Phd", "Mr", "Foo", "P.", "Bar", "III Phd", false)]
+[DataRow("Mr. Foo P. Bar III Phd", "Mr.", "Foo", "P.", "Bar", "III Phd", false)]
+[DataRow("Foo della Bar", E, "Foo", E, "della Bar", E, false)]
+[DataRow("Foo della Bar", E, "Foo", E, "della Bar", E, false)]
+[DataRow("Mr Foo della Bar", "Mr", "Foo", E, "della Bar", E, false)]
+[DataRow("Mr. Foo della Bar", "Mr.", "Foo", E, "della Bar", E, false)]
+[DataRow("fr Foo Bar", "fr", "Foo", E, "Bar", E, false)]
+[DataRow("Fr Foo Bar", "Fr", "Foo", E, "Bar", E, false)]
+[DataRow("fr. Foo Bar", "fr.", "Foo", E, "Bar", E, false)]
+[DataRow("Fr. Foo Bar", "Fr.", "Foo", E, "Bar", E, false)]
+public void NameParser_Parse_correctly_returns_parses_human_name(
+    string fullName,
+    string prefix,
+    string firstName,
+    string middleName,
+    string lastName,
+    string suffix,
+    bool isBusinessName
+    )
+{
+    Name expectedResult = new Name() {
+        Prefix = prefix, 
+        First = firstName, 
+        Middle = middleName, 
+        Last = lastName, 
+        Suffix = suffix,
+        IsOrganization = isBusinessName
+    };
+    var parser = new NameParser();
+    var results = parser.Parse(fullName);
 
-            Assert.AreEqual(
-                expected: expectedResult,
-                actual: results);
-        }
+    Assert.AreEqual(
+        expected: expectedResult,
+        actual: results);
+}
 ```
 
 
@@ -129,7 +129,7 @@ public const string E = "";
 
 Contributions are always welcome!
  
-###Contribution Guidelines
+### Contribution Guidelines
 Please ensure your pull request adheres to the following guidelines:
 
 - Alphabetize your entry.
